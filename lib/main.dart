@@ -1,10 +1,12 @@
+import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/app/auth/presenter/page/manager.dart';
 import 'package:progressprodis/global/init/initial.dart';
 import 'package:progressprodis/module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  AppInitialization.init();
 
   runApp(ModularApp(
     module: AppModule(),
@@ -23,10 +25,29 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     AppInitialization.run();
+    return const AuthManager(
+      child: AppBody(),
+    );
+  }
+}
+
+class AppBody extends StatelessWidget {
+  const AppBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: "ProgressPro",
-      routerDelegate: Modular.routerDelegate,
-      routeInformationParser: Modular.routeInformationParser,
+      title: "ProgressPro Trainer",
+      theme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: AppColors.primaryDarkColor,
+      ),
+      themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
+      routerConfig: Modular.routerConfig,
     );
   }
 }

@@ -32,3 +32,13 @@ class ErrorState extends AuthState {
   @override
   List<Object> get props => [error];
 }
+
+class GoToGetStartState extends AuthState {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToOnboardingState extends AuthState {
+  @override
+  List<Object> get props => [];
+}

@@ -1,25 +1,42 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:modular_bloc_bind/modular_bloc_bind.dart';
+import 'package:progressprodis/app/init/_children/onboarding/page/onboarding_page.dart';
+import 'package:progressprodis/app/init/_children/sign_in/presenter/page/sign_in_page.dart';
+import 'package:progressprodis/app/init/_children/started/presenter/page/get_starter_page.dart';
 import 'package:progressprodis/app/init/bloc/auth_bloc.dart';
+import 'package:progressprodis/app/init/data/repository.dart';
 import 'package:progressprodis/app/init/page/page.dart';
 import 'package:progressprodis/global/init/appconfig.dart';
 
 class AppModule extends Module {
-  @override
-  List<Bind<Object>> get binds => [
-        BlocBind.singleton(
-          (i) => AuthBloc(),
-        ),
-        Bind<AppConfig>(
-          (i) => AppConfig(name: "ProgressPro"),
-        )
-      ];
+  static const String getStarted = "/get_started";
+  static const String onboardingRoute = "/onboarding";
+  static const String signInRoute = "/sign_in";
+  static const String signUpRoute = "/sign_up";
 
   @override
-  List<ModularRoute> get routes => [
-        ChildRoute(
-          '/',
-          child: (_, __) => const InitPage(),
-        ),
-      ];
+  void binds(Injector i) {
+    i.add(AuthRepository.new);
+    i.addSingleton(AuthBloc.new);
+    i.addInstance(AppConfig(name: "ProgressPro"));
+  }
+
+  @override
+  void routes(r) {
+    r.child('/', child: (context) => const InitPage());
+    r.child(
+      getStarted,
+      transition: TransitionType.fadeIn,
+      child: (context) => const GetStarterPage(),
+    );
+    r.child(
+      onboardingRoute,
+      transition: TransitionType.fadeIn,
+      child: (context) => const OnboardingPage(),
+    );
+    r.child(
+      signInRoute,
+      transition: TransitionType.rightToLeft,
+      child: (context) => const SignInPage(),
+    );
+  }
 }
