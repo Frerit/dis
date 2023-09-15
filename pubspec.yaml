@@ -21,7 +21,8 @@ dependencies:
   get_storage: ^2.1.1
   package_info_plus: ^3.0.3
   progress_desing:
-    path: ../progress_desing
+    git: https://dev.azure.com/erilaz/ProgressPro/_git/progresspro.desing
+    #path: ../progress_desing
 
 dev_dependencies:
   flutter_lints: ^2.0.0

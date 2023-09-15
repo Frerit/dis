@@ -355,9 +355,11 @@ packages:
   progress_desing:
     dependency: "direct main"
     description:
-      path: "../progress_desing"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "2267ca795a69d9e4ba98accca0093072b1979597"
+      url: "https://dev.azure.com/erilaz/ProgressPro/_git/progresspro.desing"
+    source: git
     version: "0.0.2"
   provider:
     dependency: transitive
