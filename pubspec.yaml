@@ -2,30 +2,37 @@ name: progressprodis
 description: A new Flutter project.
 
 publish_to: "none"
-version: 2.0.0+1
+version: 1.2.0+1
 
 environment:
-  sdk: ">=2.19.4 <3.0.0"
+  sdk: '>=3.1.1 <4.0.0'
 
 dependencies:
-  animated_text_kit: ^4.2.2
-  bloc: ^8.1.1
-  carousel_slider: ^4.2.1
-  cupertino_icons: ^1.0.2
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.2
-  flutter_modular: ^6.3.2
-  flutter_svg: ^2.0.4
+  uuid: 3.0.7
+  bloc: ^8.1.2
+  dartz: ^0.10.1
+  equatable: ^2.0.5
   get_storage: ^2.1.1
-  package_info_plus: ^3.0.3
+  flutter_svg: ^2.0.7
+  fluttertoast: ^8.2.2
+  flutter_bloc: ^8.1.3
+  package_info_plus: ^4.1.0
+  percent_indicator: ^4.2.3
+  flutter_modular: ^6.3.2
+  animated_text_kit: ^4.2.2
+  carousel_slider: ^4.2.1
+  supabase_flutter: ^1.10.21
+  cupertino_icons: ^1.0.6
+
+  # Dependencias
   progress_desing:
     git: https://dev.azure.com/erilaz/ProgressPro/_git/progresspro.desing
-    #path: ../progress_desing
+
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.3
   flutter_test:
     sdk: flutter
 
@@ -36,3 +43,4 @@ flutter:
     - assets/logos/
     - assets/icons/
     - assets/images/
+    - assets/navigation/

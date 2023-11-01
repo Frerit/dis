@@ -26,7 +26,7 @@ class OnboardingPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: ElevatedButton(
                   onPressed: () {
-                    Modular.to.pushReplacementNamed(
+                    Modular.to.pushNamed(
                       AppModule.signInRoute,
                     );
                   },
@@ -98,7 +98,7 @@ class ButtonLoginIcons extends StatelessWidget {
       flex: 1,
       child: ElevatedButton(
         onPressed: () {
-          Modular.to.pushReplacementNamed(
+          Modular.to.pushNamed(
             AppModule.signInRoute,
           );
         },
@@ -161,6 +161,7 @@ class _SliderCarrouselState extends State<SliderCarrousel> {
   ];
 
   final CarouselController _controller = CarouselController();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -237,6 +238,7 @@ class OnboardingModel {
   int index;
   String title;
   String asset;
+
   OnboardingModel({
     required this.index,
     required this.title,

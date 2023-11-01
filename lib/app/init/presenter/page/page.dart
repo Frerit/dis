@@ -1,9 +1,9 @@
-import 'package:progressprodis/app/init/bloc/auth_bloc.dart';
-import 'package:progressprodis/global/init/appconfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:progressprodis/app/init/presenter/bloc/auth_bloc.dart';
+import 'package:progressprodis/global/init/app_config.dart';
 
 class InitPage extends StatelessWidget {
   const InitPage({super.key});

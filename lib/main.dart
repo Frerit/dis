@@ -1,12 +1,12 @@
-import 'package:progress_desing/progress_desing.dart';
-import 'package:progressprodis/app/auth/presenter/page/manager.dart';
-import 'package:progressprodis/global/init/initial.dart';
-import 'package:progressprodis/module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/app/auth/presenter/page/manager.dart';
+import 'package:progressprodis/global/init/app_initial.dart';
+import 'package:progressprodis/module.dart';
 
 void main() async {
-  AppInitialization.init();
+  await AppInitialization.init();
 
   runApp(ModularApp(
     module: AppModule(),

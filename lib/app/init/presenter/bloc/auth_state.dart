@@ -9,6 +9,7 @@ class AuthState extends Equatable {
 
 class UserloggingInState extends AuthState {
   const UserloggingInState(this.idToken);
+
   final String idToken;
 
   @override
@@ -39,6 +40,16 @@ class GoToGetStartState extends AuthState {
 }
 
 class GoToOnboardingState extends AuthState {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToHomeState extends AuthState {
+  @override
+  List<Object> get props => [];
+}
+
+class SessionInitialState extends AuthState {
   @override
   List<Object> get props => [];
 }
