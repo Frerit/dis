@@ -1,4 +1,4 @@
-package com.example.progressprodis
+package com.progresspro.dis
 
 import io.flutter.embedding.android.FlutterActivity
 
