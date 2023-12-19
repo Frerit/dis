@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/app/activity/module.dart';
 import 'package:progressprodis/app/home/presenter/page/home_page.dart';
 import 'package:progressprodis/global/user/user_data.dart';
 
@@ -81,76 +83,82 @@ class _ActivityPageState extends State<ActivityPage> {
                     padding: const EdgeInsets.symmetric(
                       vertical: 10,
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.only(
-                            top: 2,
-                            bottom: 8,
-                            left: 10,
-                          ),
-                          child: Text(
-                            "Reto 10 dias",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15,
+                    child: InkWell(
+                      onTap: () => Modular.to.pushNamed(ActivityModule.base),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.only(
+                              top: 2,
+                              bottom: 8,
+                              left: 10,
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 9),
-                          child: Stack(
-                            children: List.generate(
-                              3 + 1,
-                              (index) => Padding(
-                                padding: EdgeInsets.only(left: 0 + index * 25),
-                                child: index == 3
-                                    ? Container(
-                                        height: 37,
-                                        width: 37,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white.withOpacity(0.7),
-                                          borderRadius:
-                                              BorderRadius.circular(25),
-                                        ),
-                                        child: const Center(
-                                          child: Text(
-                                            "2",
-                                            style: TextStyle(
-                                              color: AppColors.primaryDarkColor,
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                    : CircleAvatar(
-                                        backgroundImage: NetworkImage(
-                                          UserData.profile,
-                                          scale: 4,
-                                        ),
-                                        radius: 20,
-                                      ),
+                            child: Text(
+                              "Reto 10 dias",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 0, top: 30, bottom: 5),
-                          child: LinearPercentIndicator(
-                            width: 100,
-                            lineHeight: 4,
-                            percent: (100 * (6 + index + 1) / 12) / 100,
-                            trailing: Text(
-                              "${2 + index}/12",
-                              style: const TextStyle(fontSize: 10),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 9),
+                            child: Stack(
+                              children: List.generate(
+                                3 + 1,
+                                (index) => Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 0 + index * 25),
+                                  child: index == 3
+                                      ? Container(
+                                          height: 37,
+                                          width: 37,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.7),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                          ),
+                                          child: const Center(
+                                            child: Text(
+                                              "2",
+                                              style: TextStyle(
+                                                color:
+                                                    AppColors.primaryDarkColor,
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      : CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                            UserData.profile,
+                                            scale: 4,
+                                          ),
+                                          radius: 20,
+                                        ),
+                                ),
+                              ),
                             ),
-                            barRadius: const Radius.circular(12),
-                            backgroundColor: Colors.white,
-                            progressColor: AppColors.lila,
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 0, top: 30, bottom: 5),
+                            child: LinearPercentIndicator(
+                              width: 100,
+                              lineHeight: 4,
+                              percent: (100 * (6 + index + 1) / 12) / 100,
+                              trailing: Text(
+                                "${2 + index}/12",
+                                style: const TextStyle(fontSize: 10),
+                              ),
+                              barRadius: const Radius.circular(12),
+                              backgroundColor: Colors.white,
+                              progressColor: AppColors.lila,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )

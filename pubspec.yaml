@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   uuid: 3.0.7
+  intl: ^0.18.1
   bloc: ^8.1.2
   dartz: ^0.10.1
   equatable: ^2.0.5

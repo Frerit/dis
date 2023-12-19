@@ -1,6 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'app/activity/_children/add_group/presenter/page/add_new_group.dart';
+import 'app/activity/_children/add_template/presenter/page/add_template_page.dart';
 import 'app/activity/module.dart';
 import 'app/home/presenter/module.dart';
 import 'app/init/_children/onboarding/page/onboarding_page.dart';
@@ -21,6 +23,8 @@ class AppModule extends Module {
   static const String onboardingRoute = "/onboarding";
   static const String signInRoute = "/sign_in";
   static const String signPassRoute = "/sign_passw";
+  static const String addGroupRoute = "/add_group";
+  static const String addTemplateRoute = "/add_template";
   static const String signUpRoute = RegisterModule.signUpRoute;
   static const String homeRoute = HomeModule.getHome;
 
@@ -70,8 +74,18 @@ class AppModule extends Module {
     );
 
     r.module(
-      ActivityModule.newGroupRoute,
+      ActivityModule.base,
       module: ActivityModule(),
+    );
+
+    r.child(
+      addGroupRoute,
+      child: (context) => const AddNewGroupView(),
+    );
+
+    r.child(
+      addTemplateRoute,
+      child: (context) => const AddTemplatePage(),
     );
   }
 }
