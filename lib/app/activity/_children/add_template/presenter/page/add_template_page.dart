@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/activity/_children/add_template/domain/models/templates_generic_model.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 
 class AddTemplatePage extends StatefulWidget {
   const AddTemplatePage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
-import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 
 class GeneralDetailPage extends StatelessWidget {
   const GeneralDetailPage({super.key});

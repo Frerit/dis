@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/activity/module.dart';
 import 'package:progressprodis/app/home/presenter/page/home_page.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:progressprodis/global/user/user_data.dart';
 
 class ActivityPage extends StatefulWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/init/_children/sign_pass/presenter/bloc/sign_password_bloc.dart';
 import 'package:progressprodis/app/init/domain/models/email_exist_model.dart';
 import 'package:progressprodis/app/init/module.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 
 class SignPasswordPage extends StatefulWidget {
   final EmailExistModel exist;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/init/_children/sign_up/presenter/bloc/sign_up_bloc.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 
 class SignSponsorPage extends StatelessWidget {
   SignSponsorPage({Key? key}) : super(key: key);

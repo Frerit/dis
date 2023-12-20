@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/home/domain/models/distributor_task.dart';
 import 'package:progressprodis/app/home/presenter/page/home_page.dart';
 import 'package:progressprodis/app/home/presenter/page/widgets/simple_card.dart';
 import 'package:progressprodis/app/home/presenter/page/widgets/swipe_card.dart';
+import 'package:progressprodis/desing/atoms/buttons/buttons.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:progressprodis/global/user/user_data.dart';
 
 class DashboardView extends StatefulWidget {

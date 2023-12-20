@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:progressprodis/module.dart';
 
 class GetStarterPage extends StatelessWidget {

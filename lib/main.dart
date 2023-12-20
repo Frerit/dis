@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/auth/presenter/page/manager.dart';
 import 'package:progressprodis/global/init/app_initial.dart';
 import 'package:progressprodis/module.dart';
+
+import 'desing/tokens/_tokens.dart';
 
 void main() async {
   await AppInitialization.init();

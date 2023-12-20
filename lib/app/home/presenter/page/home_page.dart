@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:progress_desing/progress_desing.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:progressprodis/app/activity/presenter/page/activity_page.dart';
 import 'package:progressprodis/app/calendar/presenter/page/calendar_page.dart';
 import 'package:progressprodis/app/home/presenter/_children/dashboard/presenter/page/dashboard.dart';

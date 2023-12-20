@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/home/presenter/module.dart';
 import 'package:progressprodis/app/init/_children/sign_up/presenter/bloc/sign_up_bloc.dart';
 import 'package:progressprodis/app/init/domain/models/sign_up_model.dart';
 import 'package:progressprodis/app/init/module.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:uuid/uuid.dart';
 
 class SignProfecionPage extends StatefulWidget {

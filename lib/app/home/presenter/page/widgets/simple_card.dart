@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/home/domain/models/distributor_task.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 
 class SimpleCard extends StatelessWidget {
   const SimpleCard({

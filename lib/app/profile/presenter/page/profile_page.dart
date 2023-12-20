@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:progress_desing/progress_desing.dart';
 import 'package:progressprodis/app/home/presenter/page/home_page.dart';
 import 'package:progressprodis/app/init/presenter/bloc/auth_bloc.dart';
+import 'package:progressprodis/desing/tokens/_tokens.dart';
 import 'package:progressprodis/global/user/user_data.dart';
 
 class ProfilePage extends StatefulWidget {
